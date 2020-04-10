@@ -8,6 +8,18 @@
 
 import SwiftUI
 
+struct WelcomeView: View {
+    var body: some View {
+        VStack {
+            Text("Welcome to SnowSeeker!")
+                .font(.largeTitle)
+            
+            Text("Please select a resort from the left-hand menu; swipe from the left edge to show it.")
+                .foregroundColor(.secondary)
+        }
+    }
+}
+
 struct ContentView: View {
     let resorts: [Resort] = Bundle.main.decode("resorts.json")
     
@@ -36,6 +48,9 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Resorts")
+            .phoneOnlyStackNavigationView()
+            
+            WelcomeView()
         }
     }
 }
@@ -43,5 +58,15 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension View {
+    func phoneOnlyStackNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return AnyView(self.navigationViewStyle(StackNavigationViewStyle()))
+        } else {
+            return AnyView(self)
+        }
     }
 }
