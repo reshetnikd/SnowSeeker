@@ -22,12 +22,14 @@ struct WelcomeView: View {
 
 struct ContentView: View {
     @ObservedObject var favorites = Favorites()
+    @ObservedObject var options = SliderOptions()
+    @State private var showingSliderScreen = false
     
-    let resorts: [Resort] = Bundle.main.decode("resorts.json")
+//    let resorts: [Resort] = Bundle.main.decode("resorts.json")
     
     var body: some View {
         NavigationView {
-            List(resorts) { resort in
+            List(options.filtered) { resort in
                 NavigationLink(destination: ResortView(resort: resort)) {
                     Image(resort.country)
                         .resizable()
@@ -58,6 +60,14 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Resorts")
+            .navigationBarItems(trailing: Button(action: {
+                self.showingSliderScreen.toggle()
+            }) {
+                Image(systemName: "slider.horizontal.3")
+            })
+            .sheet(isPresented: $showingSliderScreen) {
+                SliderMenu().environmentObject(self.options)
+            }
             .phoneOnlyStackNavigationView()
             
             WelcomeView()
