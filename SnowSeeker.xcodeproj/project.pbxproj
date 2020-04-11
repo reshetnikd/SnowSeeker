@@ -19,6 +19,7 @@
 		35D75AE6244100B60046C145 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D75AE5244100B60046C145 /* ResortView.swift */; };
 		35D75AE8244102140046C145 /* SkiDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D75AE7244102140046C145 /* SkiDetailsView.swift */; };
 		35D75AEA244102B20046C145 /* ResortDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D75AE9244102B20046C145 /* ResortDetailsView.swift */; };
+		35FCF9C82441F6810096E095 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FCF9C72441F6810096E095 /* Facility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		35D75AE5244100B60046C145 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
 		35D75AE7244102140046C145 /* SkiDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiDetailsView.swift; sourceTree = "<group>"; };
 		35D75AE9244102B20046C145 /* ResortDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortDetailsView.swift; sourceTree = "<group>"; };
+		35FCF9C72441F6810096E095 /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				35A06911243F953C005E6084 /* AppDelegate.swift */,
 				35A06913243F953C005E6084 /* SceneDelegate.swift */,
 				35D75AE32440F7780046C145 /* Bundle-Decodable.swift */,
+				35FCF9C72441F6810096E095 /* Facility.swift */,
 				35D75AE12440F4EB0046C145 /* Resort.swift */,
 				35D75AE5244100B60046C145 /* ResortView.swift */,
 				35D75AE9244102B20046C145 /* ResortDetailsView.swift */,
@@ -168,6 +171,7 @@
 				35A06912243F953C005E6084 /* AppDelegate.swift in Sources */,
 				35D75AE8244102140046C145 /* SkiDetailsView.swift in Sources */,
 				35D75AEA244102B20046C145 /* ResortDetailsView.swift in Sources */,
+				35FCF9C82441F6810096E095 /* Facility.swift in Sources */,
 				35A06914243F953C005E6084 /* SceneDelegate.swift in Sources */,
 				35D75AE42440F7780046C145 /* Bundle-Decodable.swift in Sources */,
 				35D75AE6244100B60046C145 /* ResortView.swift in Sources */,
